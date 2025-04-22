@@ -10,3 +10,6 @@ Development of Empowered Path Therapy, LLC Website
 - Frontend
     - DTL
     - Django Cotton
+    - Alpine.js
+- Database
+    - PostgreSQL
