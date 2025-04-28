@@ -1,10 +1,15 @@
-{% extends "base.html" %}
-
-{% block content%}
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center">
-      <h1 class="text-3xl font-bold text-blue-600 mb-2">Tailwind is working! 🎉</h1>
-      <p class="text-gray-700">If you can see this styled card, you’re all set.</p>
-    </div>
+{% extends "base.html" %} {% block content%}
+<div class="grid grid-cols-12">
+  <div class="col-span-4 p-10 bg-blue-500">01</div>
+  <div class="col-span-5 p-10 bg-pink-500">02</div>
+  <div class="col-span-3 p-10 bg-cyan-500 grid grid-cols-subgrid">
+    <div class="col-start-2">03</div>
+  </div>
 </div>
+
+<button class="btn btn-primary">click me</button>
+<button class="btn btn-secondary">click me</button>
+<button class="btn btn-accent btn-outline">click me</button>
+<button class="btn rounded-full">Click me</button>
+
 {% endblock %}

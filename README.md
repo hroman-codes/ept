@@ -11,5 +11,6 @@ Development of Empowered Path Therapy, LLC Website
     - DTL
     - Django Cotton
     - Alpine.js
+    - DaisyUI
 - Database
     - PostgreSQL
