@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class='bg-eptblue'>
+    <h1 class='bg-eptteal'>Test</h1>
+</div>
+
+<button
+  class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
+  Button
+</button>
+
+<button class="btn btn-primary">Button</button>
+
+<button class="btn w-64 rounded-full">Button</button>
+
+<details class="dropdown">
+  <summary class="btn m-1">open or close</summary>
+  <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</details>
+{% endblock %}
