@@ -1,0 +1,68 @@
+{% load static %}
+
+<div class='flex flex-col md:col-span-2 lg:col-span-2 xl:col-span-2 2xl:col-span-1 p-5 space-y-6 md:border-r md:border-eptbabyblue'>
+    <aside class='h-screen space-y-6'>
+        <!-- Logo: Hidden on md and smaller -->
+        <div class="hidden md:block">
+            <img 
+                src="{% static 'images/EPTLogo.svg' %}" 
+                alt='Empowered Path Therapy Logo'
+                class="w-40 h-auto"
+            >
+        </div>
+
+        <!-- Hamburger icon: Visible on md and smaller -->
+        <div class="md:hidden" x-data="{ open: false }">
+            <button @click="open = !open" id="hamburger-button" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Toggleable menu (initially hidden) -->
+        <div x-show="open" id="mobile-menu" class="hidden mt-4 space-y-4">
+            <a href="#" class="block text-white">Home</a>
+            <a href="#" class="block text-white">About Us</a>
+            <a href="#" class="block text-white">Meet Jarlene</a>
+            <a href="#" class="block text-white">Our Team</a>
+            <a href="#" class="block text-white">Services</a>
+            <a href="#" class="block text-white">Blog</a>
+            <a href="#" class="block text-white">Contact Us</a>
+        </div>
+
+
+        <!--  TODO: figure out how to get the side bar to disapear when I hit xxx pixels -->
+        {% comment %} <nav class='flex flex-col space-y-4'>
+            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-800 rounded text-white">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span>Home</span>
+            </a>            
+            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-800 rounded text-white">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span>About Us</span>
+            </a>            
+            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-800 rounded text-white">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span>Meet Jarlene</span>
+            </a>            
+            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-800 rounded text-white">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span>Our Team</span>
+            </a>            
+            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-800 rounded text-white">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span>Services</span>
+            </a>            
+            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-800 rounded text-white">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span>Blog</span>
+            </a>            
+            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-800 rounded text-white">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span>Contact Us</span>
+            </a>            
+        </nav> {% endcomment %}
+    </aside>
+</div>
